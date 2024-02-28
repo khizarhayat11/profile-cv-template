@@ -148,6 +148,31 @@
 
 }());
 
+$(document).ready(function () {
+	$("form").submit(function (event) {
+	  var formData = {
+		fname: $("#fname").val(),
+		lname: $("#lname").val(),
+		email: $("#email").val(),
+		subject: $("#subject").val(),
+		message: $("#message").val(),
+	  };
+  
+	  $.ajax({
+		type: "POST",
+		url: "process.php",
+		data: formData,
+		dataType: "json",
+		encode: true,
+	  }).done(function (data) {
+		console.log(data);
+	  });
+  
+	  event.preventDefault();
+	});
+  });
+  
+
 // document.getElementById("contact-form").addEventListener("submit", function(event) {
 // 	event.preventDefault(); // Prevent default form submission
 

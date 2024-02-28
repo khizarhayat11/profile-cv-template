@@ -754,33 +754,33 @@
 			</div>
 			<div class="choose animate-box">
 				<h2>Contact</h2>
-				<form  id="contact-form" action="send_email.php" method="post">
+				<form  id="contact-form" action="process.php" method="POST">
 					<div class="row form-group">
 						<div class="col-md-6">
-							<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+							<input type="text" id="fname"  name="fname" class="form-control" placeholder="Your firstname">
 						</div>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-6">
-							<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+							<input type="text" id="lname" name="lname" class="form-control" placeholder="Your lastname">
 						</div>
 					</div>
 				
 					<div class="row form-group">
 						<div class="col-md-12">
-							<input type="text" id="email" class="form-control" placeholder="Your email address">
+							<input type="text" id="email" name="email" class="form-control" placeholder="Your email address">
 						</div>
 					</div>
 				
 					<div class="row form-group">
 						<div class="col-md-12">
-							<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+							<input type="text" id="subject" name="subject" class="form-control" placeholder="Your subject of this message">
 						</div>
 					</div>
 				
 					<div class="row form-group">
 						<div class="col-md-12">
-							<textarea id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+							<textarea id="message" name="message"  cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
@@ -820,6 +820,11 @@
 	<!-- Easy PieChart -->
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- Google Map -->
+
+	<!-- ajax -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
