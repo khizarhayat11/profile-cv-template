@@ -983,6 +983,7 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   width: 100%;
   background-color: #000;
+  color: #fff;
 }
 #fh5co-footer p:last-child {
   margin-bottom: 0;
