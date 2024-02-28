@@ -147,3 +147,33 @@
 
 
 }());
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+	event.preventDefault(); // Prevent default form submission
+
+	var formData = new FormData(this); // Create a FormData object containing form data
+	var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+
+	// Define what happens on successful data submission
+	xhr.onload = function() {
+		if (xhr.status === 200) {
+			alert("Message sent successfully!");
+		} else {
+			alert("Oops! There was a problem sending your message.");
+		}
+	};
+
+	// Define what happens in case of error
+	xhr.onerror = function() {
+		alert("Oops! There was a problem sending your message.");
+	};
+
+	// Open a POST request to the server-side script
+	xhr.open("POST", "send_email.php", true);
+	
+	// Set the appropriate headers for form data
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	// Send the FormData object
+	xhr.send(new URLSearchParams(formData));
+});
